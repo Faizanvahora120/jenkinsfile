@@ -8,10 +8,12 @@ pipeline
         stages
         {
             stage("build")
+            steps {
             when {
              expression {
                 BRANCH_NAME == 'main'
                 }
+            }
             }
             {
                 steps {
