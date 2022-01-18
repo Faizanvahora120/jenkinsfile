@@ -11,7 +11,7 @@ pipeline
             {
                 steps {
                     echo "building the application"
-                    echo "building version ${NEW_VERSION}"
+                    sh 'building version ${NEW_VERSION}'
                 }
             }
              stage("test")
@@ -24,13 +24,10 @@ pipeline
             {
                 steps {
                     echo "deploying the application"
-                    echo "deploying with ${SERVER_CREDENTIALS}"
+                    sh 'deploying with ${SERVER_CREDENTIALS}'
                     sh '${SERVER_CREDENTIALS}'
-                    withCredentials([
-                    usernamePassword(credentials:'server-credentials', usernameVariable: 'USER', passwordVarialble:'PWD')]
-                    )
                     {
-                        echo "username ${USER}, password ${PWD}"
+                        sh 'username ${USER}, password ${PWD}'
                     }
 
                 }
