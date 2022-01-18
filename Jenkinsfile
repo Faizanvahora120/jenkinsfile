@@ -26,9 +26,7 @@ pipeline
                     echo "deploying the application"
                     sh 'deploying with ${SERVER_CREDENTIALS}'
                     sh '${SERVER_CREDENTIALS}'
-                    {
-                        sh 'username ${USER}, password ${PWD}'
-                    }
+                    sh 'username ${USER}, password ${PWD}'
 
                 }
             }
