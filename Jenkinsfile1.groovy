@@ -13,7 +13,7 @@ pipeline {
            {
                steps
                {
-                 bat 'kubectl apply -f pod-definition1.yml'       
+                 sh 'kubectl apply -f pod-definition1.yml' 
                }
            }
         }
