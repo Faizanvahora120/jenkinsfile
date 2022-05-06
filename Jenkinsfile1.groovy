@@ -13,6 +13,7 @@ pipeline {
            {
                steps
                {
+                 sh 'cd C:/ProgramData/Jenkins/.jenkins/workspace/DemoProject02'  
                  sh 'kubectl apply -f pod-definition1.yml' 
                }
            }
