@@ -14,7 +14,7 @@ pipeline {
                steps
                {
                  sh ''' 
-                 cd C:/ProgramData/Jenkins/.jenkins/workspace/DemoProject02'  
+                 cd C:/ProgramData/Jenkins/.jenkins/workspace/DemoProject02  
                  kubectl apply -f pod-definition1.yml
                  ''' 
                }
