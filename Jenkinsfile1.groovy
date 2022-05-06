@@ -6,7 +6,7 @@ pipeline {
             {
                 steps
                 {
-                    bat 'https://github.com/Faizanvahora120/jenkinsfile.git'
+                    bat 'http://github.com/Faizanvahora120/jenkinsfile.git'
                 }
             }
            stage('Deployment')
